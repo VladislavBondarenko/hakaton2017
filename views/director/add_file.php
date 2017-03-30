@@ -1,14 +1,22 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
-
+<section>
 <div class="container">
 
     <h4><?= $result ?></h4>
 
     <form method="post" action="" enctype="multipart/form-data">
-        <div class="input-field col-sm-6">
-            <input class="form-control" name="userfile" type="file" required>
+        <div class="row">
+        <div class="file-field input-field col s8">
+            <div class="btn">
+                <span>File</span>
+            <input class="form-control" name="userfile" type="file" accept=".txt" required>
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
         </div>
-        <button type="submit" name="submit" class="btn btn-primary">Отправить</button>
+        <button type="submit" name="submit" class="btn btn-primary col s2">Отправить</button>
+        </div>
     </form>
 
     <br>
@@ -32,5 +40,5 @@ Deadline: 2017-03-30 12:00
 Task: посмотреть результат
         </pre>
 </div>
-
+</section>
 <?php include ROOT . '/views/layouts/footer.php'; ?>

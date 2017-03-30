@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-xs-offset-3 col-xs-10">
+                            <div class="textcenter">
                                 <button type="submit" name="submit" class="btn btn-primary">Отправить</button>
                             </div>
                         </div>

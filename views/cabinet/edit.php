@@ -18,7 +18,7 @@
                     <?php endif; ?>
 
                     <div class="signup-form"><!--sign up form-->
-                        <h2>Редактирование данных</h2>
+                        <h4>Редактирование данных</h4>
 						<div class="col-sm-10 col-sm-offset-1 padding-right">
                         <form action="" method="post">
                             <p>Имя:</p>

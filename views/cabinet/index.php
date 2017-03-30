@@ -69,7 +69,7 @@
                                 <th><a href="/task/index/<?php echo $task['id_task']; ?>" title="Просмотр задания"><?= $task['task_name'] ?></a></th>
                                 <th><?= $task['user_id'] ?></th>
                                 <th><?= $task['deadline'] ?></th>
-                                <th><input type="checkbox" data-id="<?php echo $task['id_task']; ?>" id="<?php echo $task['id_task']; ?>" <?php if ($task['complete'] == 1) echo ' checked="checked"'; ?> />
+                                <th><input type="checkbox"  data-id="<?php echo $task['id_task']; ?>" id="<?php echo $task['id_task']; ?>" <?php if ($task['complete'] == 1) echo ' checked="checked"'; ?> />
                                     <label for="<?php echo $task['id_task']; ?>"></label>
                                 </th>
                                 <th><a href="/task/update/<?php echo $task['id_task']; ?>" title="Редактировать"><i class="fa fa-pencil-square-o"></i></a></th>

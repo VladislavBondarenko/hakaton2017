@@ -1,7 +1,7 @@
 <footer id="footer" class="page-footer"><!--Footer-->
     <div class="container">
         <div class="col-sm-2 col-sm-offset-5">
-            <p class="pull-left">Copyright © 2017</p>
+            <p class="pull-left">Copyright ©  TODO_Win. 2017</p>
         </div>
     </div>
 </footer><!--/Footer-->
