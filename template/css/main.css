@@ -4,6 +4,11 @@
 **************************/
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100&subset=latin,cyrillic-ext,cyrillic);
 
+.product-information{
+    border:4px double #6586e5; /* Параметры границы */
+    word-wrap: break-word;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     position: relative;

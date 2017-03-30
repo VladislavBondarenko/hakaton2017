@@ -1,6 +1,6 @@
 <footer id="footer" class="page-footer"><!--Footer-->
     <div class="container">
-        <div class="col-sm-2 col-sm-offset-5">
+        <div class="col-sm-4 col-sm-offset-4">
             <p class="pull-left">Copyright ©  TODO_Win. 2017</p>
         </div>
     </div>

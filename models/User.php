@@ -2,6 +2,22 @@
 
 class User
 {
+    public static function users()
+    {
+        $db = Db::getConnection();
+        $names = array();
+        $result = $db->query("SELECT * FROM user WHERE role = '2'");
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $i = 0;
+        while ($row = $result->fetch()) {
+            $names[$i]['id'] = $row['id'];
+            $names[$i]['name'] = $row['name'];
+            $i++;
+        }
+        return  $names;
+
+    }
+
     public static function register($name,$password,$role) {
 
         $db = Db::getConnection();

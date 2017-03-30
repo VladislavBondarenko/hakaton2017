@@ -129,6 +129,27 @@ class Task
         return $result->execute();
     }
 
+public static function updateTaskByIdDev($id, $id_task){
+    // Соединение с БД
+    $db = Db::getConnection();
+
+    // Текст запроса к БД
+    $sql = "UPDATE task
+            SET 
+                user_id = :user_id
+                
+            WHERE id_task = :id";
+
+    // Получение и возврат результатов. Используется подготовленный запрос
+    $result = $db->prepare($sql);
+    $result->bindParam(':user_id', $id, PDO::PARAM_INT);
+    $result->bindParam(':id', $id_task, PDO::PARAM_INT);
+    return $result->execute();
+
+}
+
+
+
     public static function getTasksFromFile($path)
     {
 

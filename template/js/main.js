@@ -4,8 +4,8 @@ $(document).ready(function () {
             $('.page-footer').css("position", "absolute");
         }
         else $('.page-footer').css("position", "relative");
-        console.log($('section').height() + $('#header').height(),  $(window).height());
     }
+
     bottomFooter();
     $(window).resize(bottomFooter);
 
@@ -15,9 +15,9 @@ $(document).ready(function () {
 
     });
 
-    $(":checkbox").change(function(){
+    $(":checkbox").change(function () {
         var id = $(this).attr("data-id");
-        if(this.checked){
+        if (this.checked) {
             $.post('/task/updatetask/' + id + '', {complete: 1, id: id}, function (data) {
             });
         }
@@ -26,6 +26,16 @@ $(document).ready(function () {
             });
         }
     });
+//Выбор исполнителя
+    $(".dev").change(function () {
+
+        var id = $(this).val();
+        var id_task = $(this).find(':selected').data('id');
+        $.post('/task/updatedev/' + id + '', {id: id, id_task: id_task}, function (data) {
+        });
+
+    });
+
 
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month

@@ -19,6 +19,8 @@ class CabinetController
         $user = User::getUserById($userId);
         $tasks = Task::getTasks();
         $userTasks = Task::getTasksByUser($userId);
+        $users = User::users();
+
         // Подключаем вид
         require_once(ROOT . '/views/cabinet/index.php');
         return true;

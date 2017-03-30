@@ -1,14 +1,11 @@
 <?php
 
-/**
- * Контроллер AdminProductController
- * Управление товарами в админпанели
- */
+
 class TaskController
 {
 
     /**
-     * Action для страницы "Управление товарами"
+     * Action для страницы просмотра
      */
     public function actionIndex($id)
     {
@@ -31,7 +28,7 @@ class TaskController
 
 
     /**
-     * Action для страницы "Редактировать товар"
+     * Action для страницы "Редактировать"
      */
     public function actionUpdate($id)
     {
@@ -85,10 +82,33 @@ class TaskController
             header("Location: /cabinet");
         }
 
+    return true;
+}
+
+    public function actionUpdatedev()
+    {
+        // Проверка доступа
+        User::checkLogged();
+
+        // Обработка формы
+        if (isset($_POST['id']) && isset($_POST['id_task'])) {
+            // Если форма отправлена
+            // Получаем данные из формы редактирования. При необходимости можно валидировать значения
+            $id = $_POST['id'];
+            $id_task = $_POST['id_task'];
+
+            // Сохраняем изменения
+            Task::updateTaskByIdDev($id, $id_task);
+
+
+            // Перенаправляем пользователя
+            header("Location: /cabinet");
+        }
+
         return true;
     }
     /**
-     * Action для страницы "Удалить товар"
+     * Action для страницы "Удалить"
      */
     public function actionDelete($id)
     {
