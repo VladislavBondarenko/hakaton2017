@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 29, 2017 at 04:37 PM
+-- Generation Time: Mar 30, 2017 at 02:59 PM
 -- Server version: 5.5.53
 -- PHP Version: 7.1.0
 
@@ -40,14 +40,17 @@ CREATE TABLE `task` (
 --
 
 INSERT INTO `task` (`id_task`, `task_name`, `description`, `user_id`, `deadline`, `complete`) VALUES
-(1, 'first task', 'test 112', 1, '0000-00-00 00:00:00', '1'),
-(2, 'second task', 'test 2', 2, '2017-03-27 22:16:57', '1'),
-(3, 'third task', 'test 3', 3, '2017-03-28 12:05:07', '0'),
-(4, 'first tast', 'add new', 0, '2017-03-30 08:00:05', '0'),
-(9, 'testing\r\n', 'look \r\n', 6, '2017-03-30 12:00:00', '0'),
-(10, 'testing1\r\n', 'look 1\r\n', 6, '2017-03-30 12:00:00', '0'),
-(11, 'ропор\r\n', 'вапрлд\r\n', 0, '2017-03-30 12:00:01', '0'),
-(12, 'tes', 'asd123', 2, '2017-03-21 12:32:01', '1');
+(1, 'first task', 'test 1123', 6, '2017-03-21 08:17:00', '1'),
+(2, 'second task', 'test 2', 9, '2017-03-27 22:16:57', '1'),
+(3, 'third task', 'test 31', 6, '2017-03-28 12:05:00', '0'),
+(4, 'first tast v2', 'add new', 0, '2017-03-30 08:00:00', '0'),
+(9, 'testing\r\n', 'look \r\n', 6, '2017-03-30 12:00:00', '1'),
+(40, 'загрузить задания из файла\r\n', 'заданий в файле несколько\r\n', 6, '2017-03-30 12:00:00', '0'),
+(41, 'загрузить задания из файла1\r\n', 'заданий в файле несколько1\r\n', 13, '2017-04-30 12:00:00', '0'),
+(42, 'загрузить задания из файла2\r\n', 'заданий в файле несколько2\r\n', 6, '2017-05-30 12:00:00', '0'),
+(43, 'загрузить задания из файла3\r\n', 'заданий в файле несколько3\r\n', 12, '2017-06-30 12:00:00', '0'),
+(44, 'загрузить задания из файла4\r\n', 'заданий в файле несколько4\r\n', 8, '2017-07-30 12:00:00', '0'),
+(45, 'загрузить задания из файла5\r\n', 'заданий в файле несколько5\r\n', 0, '2017-08-30 12:00:00', '0');
 
 -- --------------------------------------------------------
 
@@ -76,7 +79,11 @@ INSERT INTO `user` (`id`, `name`, `password`, `role`) VALUES
 (7, 'teamlead', 'e10adc3949ba59abbe56e057f20f883e', '1'),
 (8, 'worker2', 'e10adc3949ba59abbe56e057f20f883e', '2'),
 (9, 'frog1', 'e10adc3949ba59abbe56e057f20f883e', '2'),
-(10, 'qwerty', 'd8578edf8458ce06fbc5bb76a58c5ca4', '2');
+(10, 'qwerty', 'd8578edf8458ce06fbc5bb76a58c5ca4', '2'),
+(11, 'dog', 'e10adc3949ba59abbe56e057f20f883e', '1'),
+(12, 'dev1', 'e10adc3949ba59abbe56e057f20f883e', '2'),
+(13, 'dev2', 'e10adc3949ba59abbe56e057f20f883e', '2'),
+(14, 'director', 'e10adc3949ba59abbe56e057f20f883e', '0');
 
 --
 -- Indexes for dumped tables
@@ -93,7 +100,8 @@ ALTER TABLE `task`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -103,12 +111,12 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `task`
 --
 ALTER TABLE `task`
-  MODIFY `id_task` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_task` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

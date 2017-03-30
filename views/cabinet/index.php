@@ -6,7 +6,7 @@
                 <h5>Кабинет пользователя</h5>
                 <h4><?php echo $user['name']; ?></h4>
                 <ul>
-                    <li><a href="/cabinet/edit">Редактировать данные</a></li>
+                    <li><a href="/cabinet/edit">Редактировать данные пользователя</a></li>
 
                 </ul>
 
@@ -28,7 +28,7 @@
                 <thead>
                 <tr>
                     <th>Task name</th>
-                    <?php if ($_SESSION['role'] != 2): ?>
+                    <?php if ($_SESSION['role'] == 1): ?>
                         <th>Dev name</th>
                     <?php endif; ?>
                     <th>Deadline</th>
@@ -67,7 +67,6 @@
                         <?php foreach ($tasks as $task): ?>
                             <tr>
                                 <th><a href="/task/index/<?php echo $task['id_task']; ?>" title="Просмотр задания"><?= $task['task_name'] ?></a></th>
-                                <th><?= $task['user_id'] ?></th>
                                 <th><?= $task['deadline'] ?></th>
                                 <th><input type="checkbox"  data-id="<?php echo $task['id_task']; ?>" id="<?php echo $task['id_task']; ?>" <?php if ($task['complete'] == 1) echo ' checked="checked"'; ?> />
                                     <label for="<?php echo $task['id_task']; ?>"></label>
@@ -93,7 +92,6 @@
                                         <option  value="0" >Выберите исполнителя</option>
                                         <?php foreach ($users as $user): ?>
                                                     <option data-id="<?php echo $task['id_task']; ?>" <?php if ($user['id']==$task['user_id']) echo "selected"?> value="<?= $user['id']?>" ><?= $user['name']?></option>
-
                                         <?php endforeach; ?>
                                     </select>
                                 </th>
