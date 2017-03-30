@@ -23,9 +23,9 @@
                 <div class="header_top"><!--header_top-->
                     <div class="container">
 
-                                <div class="contactinfo">
+                                <div class="contactinfo col-sm-2 col-sm-offset-5">
                                     <ul class="nav nav-pills">
-                                        <li><a href="#"><i class="fa fa-users"></i> TODO_Win</a></li>
+                                        <li><a href="/"><i class="fa fa-users"></i> TODO_Win</a></li>
                                     </ul>
                                 </div>
                     </div>
